@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal portfolio of Joseph Hare, Software Engineering Graduate" />
+    <title>Joseph Hare – Portfolio</title>
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#profile" class="brand">Joseph Hare</a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+          <ul id="navMenu">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="profile" class="section profile-section">
+        <div class="container profile-grid">
+          <img src="assets/profile.jpg" alt="Profile photo" class="profile-photo" />
+          <div>
+            <h1>Joseph Hare</h1>
+            <p class="subtitle">Software Engineering Graduate</p>
+            <p class="bio">
+              I am a Software Engineering graduate from the University of Kent, passionate about building
+              innovative, full-stack applications. I enjoy exploring new technologies and solving complex
+              problems, creating projects that combine intuitive frontends with robust backend systems.
+              Experienced in collaborative environments, I thrive working with teams to design, develop,
+              and deploy effective software solutions that make an impact.
+            </p>
+            <div class="profile-actions">
+              <a class="button" href="#projects">View Projects</a>
+              <a class="button button-secondary" href="#contact">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Project Management System – Full Stack Microservices</h3>
+              <p class="project-desc">A system to improve university final-year project management (e.g., group matching). RESTful backend with React frontend, containerised and deployed on Kubernetes with Agile development and CI/CD. Deployed for real students at Kent University.</p>
+              <p class="project-tech">Tech: Node.js, Express, PostgreSQL, Docker, Kubernetes, Helm, NGINX, GitLab CI/CD</p>
+              <div class="project-links">
+                <a href="https://github.com/Joehare16/Final-Year-Project" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>NoteNest – Full‑stack SaaS Application</h3>
+              <p class="project-desc">A secure SaaS platform for personal and collaborative notes. Spring Boot REST API with role-based access, responsive React frontend, containerised with Docker, deployed on Kubernetes, Stripe subscriptions, and CI/CD.</p>
+              <p class="project-tech">Tech: Java, Spring Boot, React, PostgreSQL, Docker, Kubernetes, JWT, Stripe</p>
+              <div class="project-links">
+                <a href="https://github.com/Joehare16/notenest" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>GP Management System</h3>
+              <p class="project-desc">Desktop app for managing GP appointments and patient registrations. Integrated patient/doctor database with notifications, built with Agile practices and TDD for reliability.</p>
+              <p class="project-tech">Tech: Java, Java Swing, SQL</p>
+              <div class="project-links">
+                <a href="https://github.com/Joehare16/JoeHareProjects" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section">
+        <div class="container">
+          <h2>Resume</h2>
+          <div class="resume-actions">
+            <a class="button" href="resume/resume.pdf" download>Download PDF</a>
+          </div>
+          <div class="resume-embed">
+            <object data="resume/resume.pdf" type="application/pdf" aria-label="Embedded resume">
+              <p>Your browser may not support inline PDFs. <a href="resume/resume.pdf">Download the resume</a> instead.</p>
+            </object>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <form id="contactForm" action="https://formspree.io/f/movnvqeg" method="POST" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+              <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error" id="messageError"></span>
+            </div>
+            <button class="button" type="submit">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Joseph Hare. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
+
+
